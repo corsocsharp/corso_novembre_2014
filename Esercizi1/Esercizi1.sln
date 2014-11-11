@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatisticheNumeri", "StatisticheNumeri\StatisticheNumeri.csproj", "{30870692-EE0B-4545-AF9A-6F75070A533B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSu3", "MaxSu3\MaxSu3.csproj", "{9B946116-F522-45F3-BFF8-1669840B32B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdineGrandezza", "OrdineGrandezza\OrdineGrandezza.csproj", "{849E81FE-BB0D-419A-986D-F7CF059CA2FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30870692-EE0B-4545-AF9A-6F75070A533B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30870692-EE0B-4545-AF9A-6F75070A533B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30870692-EE0B-4545-AF9A-6F75070A533B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30870692-EE0B-4545-AF9A-6F75070A533B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B946116-F522-45F3-BFF8-1669840B32B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B946116-F522-45F3-BFF8-1669840B32B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B946116-F522-45F3-BFF8-1669840B32B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B946116-F522-45F3-BFF8-1669840B32B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849E81FE-BB0D-419A-986D-F7CF059CA2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849E81FE-BB0D-419A-986D-F7CF059CA2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849E81FE-BB0D-419A-986D-F7CF059CA2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849E81FE-BB0D-419A-986D-F7CF059CA2FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
