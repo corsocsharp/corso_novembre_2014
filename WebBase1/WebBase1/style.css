@@ -1,0 +1,29 @@
+﻿
+li {
+    font-style: italic;
+}
+
+/* tutti gli a dentro gli li */
+    li a {
+        font-weight: bold;
+    }
+
+/* tutti i tag con classe 'rosso'*/
+.rosso {
+    color: red;
+}
+
+/* tutti gli ul con classe 'spesa' */
+ul.spesa {
+    border: 1px solid blue;
+    margin: 10px;
+}
+
+/* tutti gli li dentro ul con classe 'spesa'*/
+    ul.spesa li {
+        font-weight: bold;
+    }
+
+#header {
+
+}
