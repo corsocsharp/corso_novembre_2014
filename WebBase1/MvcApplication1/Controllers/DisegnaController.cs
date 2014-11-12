@@ -11,7 +11,7 @@ namespace MvcApplication1.Controllers
         //
         // GET: /Disegna/
 
-        public ActionResult Riga(int lunghezza)
+        public ActionResult Riga(int lunghezza = 10)
         {
 
             ViewBag.Lunghezza = lunghezza;
