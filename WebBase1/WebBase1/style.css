@@ -17,12 +17,14 @@ li {
 ul.spesa {
     border: 1px solid blue;
     margin: 10px;
+    list-style-type: none;
 }
 
 /* tutti gli li dentro ul con classe 'spesa'*/
     ul.spesa li {
-        font-weight: bold;
-    }
+    font-weight: bold;
+
+}
 
 #header {
 

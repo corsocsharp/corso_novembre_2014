@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="page1.html" />
     <Content Include="prova.txt" />
+    <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

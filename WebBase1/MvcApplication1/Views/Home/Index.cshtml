@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+
+    string text = "ciao!!!";
+    int v = 18;  
+}
+
+<h2>Index marco.denittis@@gmail.com</h2>
+wow!
+<p>
+    volevo dirti: @text
+</p>
+<p>
+    Facendo conti: @(2+2+5)
+</p>
+<p>
+   Ora esatta: @DateTime.Now
+</p>
+@if (DateTime.Now.Second < 30) { 
+    <p>Inizio minuto</p>
+} else {
+    <p>Fine minuto</p>
+}
+
+
