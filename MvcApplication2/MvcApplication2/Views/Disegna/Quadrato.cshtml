@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Quadrato";
+    int lato = ViewBag.Lato;
+    string car = ViewBag.Carattere;
+}
+
+<h2>Quadrato</h2>
+
+
+@*<form action="~/Disegna/Quadrato" method="get" >*@
+<!-- il valore di default della action è la pagina corrente -->
+<form method="get" >
+
+    <select name="lato">
+        @for(int numero = 1; numero <= 100; numero ++){
+            if(numero == lato){
+                <option selected="selected" >@numero</option>
+            }else{
+                <option>@numero</option>
+            }
+        }
+    </select>
+
+    <input type="text" name="carattere" value="@car" />
+
+    <input type="submit" value="Disegna!" />
+</form>
+
+
+<table>
+    @for (int riga = 0; riga < lato; riga++){
+    <tr>
+        @for(int colonna = 0; colonna < lato; colonna ++){
+            <td>@car</td>
+        }
+    </tr>
+    }
+</table>

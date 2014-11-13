@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Righe";
+
+    int lungh = ViewBag.Lunghezza;
+    
+}
+
+<h2>Disegna - Righe</h2>
+
+<form action="~/Disegna/Righe" method="get" >
+    <input type="text" name="lunghezza" value="@lungh" />
+
+    <input type="submit" value="Disegna!" />
+</form>
+
+<hr />
+
+<form action="~/Disegna/Righe" method="get" >
+    <!--<select name="lunghezza">
+        <option>1</option>
+        <option>2</option>
+        <option >3</option>
+        <option selected="selected">4</option>
+    </select>-->
+
+    <select name="lunghezza">
+        @for(int numero = 1; numero <= 100; numero ++){
+            if(numero == lungh){
+                <option selected="selected" >@numero</option>
+            }else{
+                <option>@numero</option>
+            }
+        }
+    </select>
+
+    <input type="submit" value="Disegna!" />
+</form>
+
+<hr />
+
+<p>
+    Riga di lunghezza @lungh
+</p>
+
+<table>
+    <tr>
+        @for(int i = 0; i < lungh; i++){
+            <td>*</td>
+        }
+    </tr>
+</table>
+
+<table>
+        @for(int i = 0; i < lungh; i++){
+    <tr>
+        <td>*</td>
+    </tr>
+        }
+</table>
