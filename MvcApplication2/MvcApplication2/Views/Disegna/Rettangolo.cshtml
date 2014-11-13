@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Rettangolo";
+    int latoA = ViewBag.LatoA;
+    int latoB = ViewBag.LatoB;
+    string car = ViewBag.Carattere;
+}
+
+<h2>Rettangolo</h2>
+
+<form method="get" >
+
+    <select name="latoA">
+        @for(int numero = 1; numero <= 100; numero ++){
+            if(numero == latoA){
+                <option selected="selected" >@numero</option>
+            }else{
+                <option>@numero</option>
+            }
+        }
+    </select>
+
+    <select name="latoB">
+        @for(int numero = 1; numero <= 100; numero ++){
+            if(numero == latoB){
+                <option selected="selected" >@numero</option>
+            }else{
+                <option>@numero</option>
+            }
+        }
+    </select>
+
+    <input type="text" name="carattere" value="@car" />
+
+    <input type="submit" value="Disegna!" />
+</form>
+
+<table>
+    @for (int riga = 0; riga < latoA; riga++) { 
+    <tr>
+        @for (int col = 0; col < latoB; col++) { 
+            <td>@car</td>
+        }
+    </tr>
+    }
+</table>

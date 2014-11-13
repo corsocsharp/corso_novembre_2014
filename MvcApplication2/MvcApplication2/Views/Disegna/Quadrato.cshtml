@@ -2,9 +2,10 @@
     ViewBag.Title = "Quadrato";
     int lato = ViewBag.Lato;
     string car = ViewBag.Carattere;
+    string azione = ViewBag.Azione;
 }
 
-<h2>Quadrato</h2>
+
 
 
 @*<form action="~/Disegna/Quadrato" method="get" >*@
@@ -22,17 +23,64 @@
     </select>
 
     <input type="text" name="carattere" value="@car" />
-
-    <input type="submit" value="Disegna!" />
+    <p>
+        <input type="submit" name="azione" value="Quadrato" />
+        <input type="submit" name="azione" value="Triangolo" />
+        <input type="submit" name="azione" value="Tavola pitagorica" />
+    </p>
 </form>
 
+@if(azione == "Quadrato"){
 
-<table>
-    @for (int riga = 0; riga < lato; riga++){
-    <tr>
-        @for(int colonna = 0; colonna < lato; colonna ++){
-            <td>@car</td>
+    <h2>Quadrato</h2>    
+    
+    <table>
+        @for (int riga = 0; riga < lato; riga++){
+        <tr>
+            @for(int colonna = 0; colonna < lato; colonna ++){
+                <td>@car</td>
+            }
+        </tr>
         }
-    </tr>
-    }
-</table>
+    </table>
+}
+
+@if(azione == "Triangolo"){
+
+    <h2>Triangolo</h2>    
+    
+    <table>
+        @for (int riga = 0; riga < lato; riga++)
+        {
+            <tr>
+                @for (int col = 0; col <= riga ; col++) { 
+                    <td>@car</td>
+                }
+            </tr>
+        }
+    </table>
+    
+}
+
+@if (azione == "Tavola pitagorica")
+{
+    <h2>Tavola pitagorica</h2>    
+    
+    <table>
+        @for (int riga = 1; riga <= lato; riga++){
+        <tr>
+            @for(int colonna = 1; colonna <= lato; colonna ++){
+                if (riga == 1 || colonna == 1)
+                {
+                    <th>@(riga * colonna)</th>
+                } else {
+                    <td>@(riga * colonna)</td>
+                }
+            }
+        </tr>
+        }
+    </table>
+    
+}
+
+

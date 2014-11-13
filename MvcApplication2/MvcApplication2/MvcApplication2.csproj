@@ -219,6 +219,7 @@
     <Content Include="Views\Disegna\Righe.cshtml" />
     <Content Include="Views\Disegna\Quadrato.cshtml" />
     <Content Include="Views\Home\Somma.cshtml" />
+    <Content Include="Views\Disegna\Rettangolo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
