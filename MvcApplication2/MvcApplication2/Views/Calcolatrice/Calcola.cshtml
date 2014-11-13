@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Calcola";
+
+    int val1 = ViewBag.Valore1;
+    int val2 = ViewBag.Valore2;
+    double risultato = ViewBag.Risultato;
+    string op = ViewBag.Operazione;
+    string attributo;
+}
+
+<h2>Calcolatrice</h2>
+
+<form method="get">
+
+    <input type="text" name="val1" value="@val1" />
+    <select name="operazione">
+        
+        <!-- modo inline per inserire l'attributo selected -->
+        <option @( op == "+" ? "selected='selected'" : "" ) >+</option>
+        <option @( op == "-" ? "selected='selected'" : "" )>-</option>
+        
+        <!-- modo con variabile per inserire l'attributo selected -->
+        @{ if(op == "*"){
+               attributo = "selected='selected'";
+           }else {
+                attributo = "";
+           }
+        }
+        <option @attributo >*</option>
+
+        <!-- modo con if  per inserire l'attributo selected -->
+        @if (op == "/"){
+            <option selected="selected">/</option>
+        } else {
+            <option>/</option>
+        }
+
+    </select>
+    <input type="text" name="val2" value="@val2"/>
+    =
+    @risultato
+    <p>
+        <input type="submit" value="Calcola" />
+    </p>
+
+</form>

@@ -122,6 +122,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CalcolatriceController.cs" />
     <Compile Include="Controllers\DisegnaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -220,6 +221,7 @@
     <Content Include="Views\Disegna\Quadrato.cshtml" />
     <Content Include="Views\Home\Somma.cshtml" />
     <Content Include="Views\Disegna\Rettangolo.cshtml" />
+    <Content Include="Views\Calcolatrice\Calcola.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
