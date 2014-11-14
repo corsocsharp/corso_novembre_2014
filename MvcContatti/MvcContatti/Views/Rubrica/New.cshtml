@@ -1,0 +1,17 @@
+﻿@model MvcContatti.Models.Contatto
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Nuovo contatto</h2>
+
+<form method="post" action="~/Rubrica/Save" >
+
+    <div class="form-group">
+        <label >Name</label>
+        <input type="text" name="nome" 
+                class="form-control" placeholder="Nome contatto">
+    </div>
+
+</form>

@@ -24,5 +24,10 @@ namespace MvcContatti.Controllers
             return View(contatti);
         }
 
+
+        public ActionResult New() {
+            return View();
+        }
+
     }
 }

@@ -1,8 +1,29 @@
 ﻿@model List<MvcContatti.Models.Contatto>
+@using MvcContatti.Models
 
 @{
     ViewBag.Title = "List";
 }
 <h2>List</h2>
 
-Contatti: @Model
+Contatti: @Model.Count
+
+<table class="table table-bordered table-condensed table-striped">
+    <tr>
+        <th>Cognome</th>
+        <th>Nome</th>
+        <th>Indirizzo</th>
+        <th>Telefono</th>
+        <th>Mail</th>
+    </tr>
+    @foreach (Contatto c in Model) { 
+    <tr>
+        <td>@c.Cognome</td>
+        <td>@c.Nome</td>
+        <td>@c.Indirizzo</td>
+        <td>@c.Telefono</td>
+        <td>@c.Email</td>
+    </tr>
+    }
+
+</table>
