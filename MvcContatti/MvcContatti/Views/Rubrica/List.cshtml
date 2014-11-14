@@ -18,7 +18,7 @@ Contatti: @Model.Count
     </tr>
     @foreach (Contatto c in Model) { 
     <tr>
-        <td>@c.Cognome</td>
+        <td><a href="~/Rubrica/View/@c.Id"> @c.Cognome </a></td>
         <td>@c.Nome</td>
         <td>@c.Indirizzo</td>
         <td>@c.Telefono</td>

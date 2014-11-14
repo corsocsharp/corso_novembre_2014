@@ -8,10 +8,30 @@
 
 <form method="post" action="~/Rubrica/Save" >
 
-    <div class="form-group">
-        <label >Name</label>
-        <input type="text" name="nome" 
-                class="form-control" placeholder="Nome contatto">
-    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Informazioni contatto</div>
 
+      <div class="panel-body ">
+
+        <div class="form-group">
+            <label >Nome</label>
+            <input type="text" name="nome" 
+                    class="form-control" placeholder="Nome contatto">
+        </div>
+
+        <div class="form-group">
+            <label >Cognome</label>
+            <input type="text" name="cognome" 
+                    class="form-control" placeholder="Cognome contatto">
+        </div>
+
+      </div><!-- chiuso div panel-body -->
+
+      <div class="panel-footer">
+            <a href="~/Rubrica/List" class="btn btn-default" >Torna all'elenco</a>
+
+            <input type="submit" value="Salva" class="btn btn-primary" />
+       </div><!-- chiuso div panel-footer -->
+    
+    </div><!-- chiuso div panel -->
 </form>

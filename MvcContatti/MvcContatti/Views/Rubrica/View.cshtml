@@ -1,0 +1,34 @@
+﻿@model MvcContatti.Models.Contatto
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>Mostra contatto</h2>
+
+ <div class="panel panel-primary">
+      <div class="panel-heading">Informazioni contatto</div>
+
+      <div class="panel-body ">
+
+        <div class="form-group">
+            <label >Nome</label>
+            @Model.Nome
+        </div>
+
+        <div class="form-group">
+            <label >Cognome</label>
+            @Model.Cognome
+        </div>
+
+      </div><!-- chiuso div panel-body -->
+
+      <div class="panel-footer">
+          <a href="~/Rubrica/List" class="btn btn-default" >Torna all'elenco</a>
+
+          <a href="~/Rubrica/Edit/@Model.Id" class="btn btn-primary" >
+              Modifica</a>
+          
+       </div><!-- chiuso div panel-footer -->
+    
+    </div><!-- chiuso div panel -->

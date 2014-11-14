@@ -7,13 +7,21 @@ namespace MvcContatti.Models
 {
     public class DBService
     {
-        private List<Contatto> _dbContatti;
+        static private List<Contatto> _dbContatti;
 
         /// <summary>
         /// Costruttore, chiamato automaticamente quando 
         /// viene fatto il new di un nuovo dbservice
         /// </summary>
         public DBService() {
+            if (_dbContatti == null)
+            {
+                PopolaContatti();
+            }
+        }
+
+        private static void PopolaContatti()
+        {
             _dbContatti = new List<Contatto>();
 
             Contatto c = new Contatto();
@@ -25,7 +33,8 @@ namespace MvcContatti.Models
             c.Telefono = "2323432";
             _dbContatti.Add(c);
 
-            c = new Contatto(){
+            c = new Contatto()
+            {
                 Id = "2",
                 Nome = "Pippo",
                 Cognome = "Disney",
@@ -53,12 +62,29 @@ namespace MvcContatti.Models
                 Email = "paperino@disney.com"
             };
             _dbContatti.Add(c);
-
         }
 
 
         public List<Contatto> ListContatti() {
             return _dbContatti;
+        }
+
+        public void AddContatto(Contatto contatto)
+        {
+            contatto.Id = DateTime.Now.Ticks.ToString();
+
+            _dbContatti.Add(contatto);  
+        }
+
+        public Contatto GetContatto(string id)
+        {
+            foreach (Contatto c in _dbContatti) {
+                if (c.Id == id) {
+                    return c;
+                }
+            }
+
+            return null;
         }
     }
 }
