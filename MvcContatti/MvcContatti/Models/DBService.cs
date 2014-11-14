@@ -86,5 +86,19 @@ namespace MvcContatti.Models
 
             return null;
         }
+
+        public void UpdateContatto(Contatto contatto)
+        {
+            Contatto attuale = GetContatto(contatto.Id);
+            attuale.Nome = contatto.Nome;
+            attuale.Cognome = contatto.Cognome;
+
+        }
+
+        public void DeleteContatto(string id)
+        {
+            Contatto contatto = GetContatto(id);
+            _dbContatti.Remove(contatto);
+        }
     }
 }

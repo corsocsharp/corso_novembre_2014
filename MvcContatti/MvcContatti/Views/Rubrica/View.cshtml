@@ -29,6 +29,10 @@
           <a href="~/Rubrica/Edit/@Model.Id" class="btn btn-primary" >
               Modifica</a>
           
+          <form method="post" action="~/Rubrica/Delete" >
+              <input type="hidden" name="id" value="@Model.Id" />
+              <input type="submit" value="Elimina contatto" class="btn btn-danger"  />
+          </form>
        </div><!-- chiuso div panel-footer -->
     
     </div><!-- chiuso div panel -->

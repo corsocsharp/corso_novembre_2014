@@ -10,6 +10,14 @@ namespace MvcContatti.Controllers
 {
     public class RubricaController : Controller
     {
+
+        DBService _db;
+
+        public RubricaController() {
+            _db = new DBService();
+        }
+
+
         public ActionResult Index()
         {
             return RedirectToAction("List");
@@ -17,9 +25,7 @@ namespace MvcContatti.Controllers
 
         public ActionResult List()
         {
-            DBService db = new DBService();
-
-            List<Contatto> contatti = db.ListContatti();
+            List<Contatto> contatti = _db.ListContatti();
 
             return View(contatti);
         }
@@ -29,26 +35,45 @@ namespace MvcContatti.Controllers
             return View();
         }
 
-        public ActionResult Save(string nome, string cognome) {
+        public ActionResult Save(string id, string nome, string cognome) {
             
             Contatto c = new Contatto() { 
+                Id = id,
                 Nome = nome,
                 Cognome = cognome
             };
 
-            DBService db = new DBService();
-            db.AddContatto(c);
+            if (String.IsNullOrEmpty(id))
+            {
+                _db.AddContatto(c);
 
-            return RedirectToAction("List");
+                return RedirectToAction("List");
+            }else {
+                _db.UpdateContatto(c);
+
+                return Redirect("~/Rubrica/View/" + id);
+            }
         }
 
         public ActionResult View(string id) {
 
-            DBService db = new DBService();
-            Contatto c = db.GetContatto(id);
+            Contatto c = _db.GetContatto(id);
 
             return View(c);
 
+        }
+
+        public ActionResult Edit(string id)
+        {
+            Contatto c = _db.GetContatto(id);
+
+            return View(c);
+        }
+
+        public ActionResult Delete(string id) {
+            _db.DeleteContatto(id);
+
+            return RedirectToAction("List");
         }
 
     }

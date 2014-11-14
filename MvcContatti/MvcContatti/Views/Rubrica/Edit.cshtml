@@ -1,0 +1,41 @@
+﻿@model MvcContatti.Models.Contatto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Modifica contatto</h2>
+
+
+<form method="post" action="~/Rubrica/Save" >
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Informazioni contatto</div>
+
+      <div class="panel-body ">
+
+        <input type="hidden" name="id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label >Nome</label>
+            <input type="text" name="nome" value="@Model.Nome"
+                    class="form-control" placeholder="Nome contatto">
+        </div>
+
+        <div class="form-group">
+            <label >Cognome</label>
+            <input type="text" name="cognome" value="@Model.Cognome"
+                    class="form-control" placeholder="Cognome contatto">
+        </div>
+
+      </div><!-- chiuso div panel-body -->
+
+      <div class="panel-footer">
+            <a href="~/Rubrica/List" class="btn btn-default" >Torna all'elenco</a>
+
+            <input type="submit" value="Salva" class="btn btn-primary" />
+       </div><!-- chiuso div panel-footer -->
+    
+    </div><!-- chiuso div panel -->
+</form>
+
